@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.OneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/top_left" />
+
+        <SearchView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_45"
+            android:padding="@dimen/dp_15"
+            android:layout_gravity="center"
+            android:layout_weight="8"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="搜索"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.zhouwei.mzbanner.MZBannerView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:canLoop="true"
+                app:indicatorAlign="center"
+                app:indicatorPaddingLeft="10dp"
+                app:open_mz_mode="true"></com.zhouwei.mzbanner.MZBannerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/rexiao"
+                android:gravity="center"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="热销新品"
+                android:textColor="#f00" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rexiaoxinpin"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/moli"
+                android:gravity="center"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="魔力时尚"
+                android:textColor="#f00" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/molishishang"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="4"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/pizhi"
+                android:gravity="center"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="品质生活"
+                android:textColor="#f00" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pinzhishenghuo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

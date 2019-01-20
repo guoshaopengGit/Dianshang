@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        applicationId "gsp.com.dimensionbusiness"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //圆形进度条加载依赖
+    implementation 'com.czp.arcProgressBar:ArcProgressBar:1.0.1'
+    /*banner轮播图 依赖*/
+    implementation 'com.youth.banner:banner:1.4.9'
+    //*ZXing二维码扫描*/
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.2.1'
+    /*Picasso*/
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    /*okhttp网络请求*/
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    //banner仿魅族的依赖
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    implementation 'com.facebook.fresco:fresco:1.11.0'
+    //MetrialDesign:Design库
+    implementation 'com.android.support:design:28.+'
+    //Butterknife:根据反射注入框架
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //Brvah：RecyclerView快速开发框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-19'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-19'
+    //没有使用特殊Header，可以不加这行
+    //okgo
+    //必须使用
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+}
